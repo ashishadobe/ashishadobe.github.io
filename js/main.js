@@ -1,33 +1,81 @@
-// Select DOM Items
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-const menuNav = document.querySelector('.menu-nav');
-const menuBranding = document.querySelector('.menu-branding');
-const navItems = document.querySelectorAll('.nav-item');
+ jQuery(document).ready(function(){
+     
+   "use strict"
+    $('.slider').ripples({
+      dropRadius: 11,
+      perturbance: 0.01,
+       
+    });
+  
+     $(".text").typed({
+        strings:["<strong>i love</strong><strong class='primary'> codings.</strong>","<strong>and to</strong><strong class='primary'> share !!.</strong>"],
+         typespeed:0,
+         loop:true
+         
+     });
+     
+    $(window).scroll(function(){
+        
+       var top = $(window).scrollTop();
+        if(top>=60){
+          $("nav").addClass('secondary'); 
+        }
+        
+        else 
+            if($("nav").hasClass('secondary')){
+                $("nav").removeClass('secondary'); 
+            }
+    });
 
-// Set Initial State Of Menu
-let showMenu = false;
+      $('.work').magnificPopup({
+      delegate: 'a', // child items selector, by clicking on it popup will open
+      type: 'image',
+      gallery: {
+      enabled: true
+       } 
+                               
+    });
+     
+      $("#team-members").owlCarousel({
+          items:3,
+          autoplay:true,
+          smartSpeed:700,
+          loop:true,
+          autoplayHoverPause:true,
+            responsive:{
+              0:{
+          
+                 items:1
+              }, 
+             480:{
+          
+                 items:2
+              }, 
+                                     
+             768:{
+          
+                 items:3
+              } 
+            }
+          
+          
+          
+      });
+     $('.counter').counterUp({
+                delay: 10,
+                time: 4000
+            });
+     
+      $("a.smooth-scroll").click(function (event) {
 
-menuBtn.addEventListener('click', toggleMenu);
+        event.preventDefault();
+        
+        var section = $(this).attr("href");
 
-function toggleMenu() {
-  if (!showMenu) {
-    menuBtn.classList.add('close');
-    menu.classList.add('show');
-    menuNav.classList.add('show');
-    menuBranding.classList.add('show');
-    navItems.forEach(item => item.classList.add('show'));
-
-    // Set Menu State
-    showMenu = true;
-  } else {
-    menuBtn.classList.remove('close');
-    menu.classList.remove('show');
-    menuNav.classList.remove('show');
-    menuBranding.classList.remove('show');
-    navItems.forEach(item => item.classList.remove('show'));
-
-    // Set Menu State
-    showMenu = false;
-  }
-}
+        $('html, body').animate({
+            scrollTop: $(section).offset().top - -2
+        }, 1250, "easeInOutExpo");
+    });
+     new WOW().init();
+     
+ });
