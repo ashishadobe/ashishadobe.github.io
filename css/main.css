@@ -1,0 +1,109 @@
+body{
+	color: #222222;
+}
+
+.jumbotron{
+	background-color: #3498db;
+}
+
+.avatar{
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	border: solid 5px #FFF;
+	display: inline-block;
+	background: url('../img/avatar.jpg');
+	height: 128px;
+	width: 128px;
+}
+
+#header a{
+	text-transform: uppercase;
+	color: #ffffff;
+	margin: 0 15px 0 15px;
+	font-weight: bolder;
+}
+
+#menu{
+	margin-top:50px;
+}
+
+
+#about h2{
+	font-size: 35px;
+	text-transform: uppercase;
+	margin: 70px 0 70px 0;
+	color: #222222;
+}
+
+#about p.text{
+	font-size: 14px;
+	line-height: 1.70;
+	text-align:justify;
+	color: #222222;
+}
+
+#about .btn{
+	margin-top: 90px;
+	margin-bottom: 135px;
+	background-color: #3498DB;
+	font-size: 17px;
+	padding: 12px 40px;
+}
+
+#about .btn:hover{
+	background-color: #99CBED;
+}
+
+#work{
+	background: #99cbed;
+	padding-top: 95px;
+}
+
+#work img{
+	margin-bottom: 50px;
+}
+
+#contacts{
+	margin-bottom: 80px;
+}
+
+
+#contacts p{
+	font-size: 23px;
+}
+
+#contacts h2{
+	font-size: 35px;
+	text-transform: uppercase;
+	margin: 70px 0 35px 0;
+	color: #222222;
+}
+
+#contacts a{
+	color: #222222;
+}
+
+#contacts a:hover{
+	color: #3498db;
+}
+
+#footer{
+	height: 50px;
+	margin-bottom: 0px;
+	padding-top: 25px;
+	padding-bottom: 60px;
+}
+
+#footer span{
+	color: #fff;
+	font-size: 11px;
+}
+
+
+#footer .icon{
+	float: right;
+	margin-left: 10px;
+}
